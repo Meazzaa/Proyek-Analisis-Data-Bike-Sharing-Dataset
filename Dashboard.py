@@ -36,8 +36,7 @@ ax = sns.barplot(
     hue="season",
     data=data_2012,
     palette="viridis",
-    dodge=False,  
-    legend=False,
+    legend="full",
     ax=ax
 )
 season_label = ["Spring", "Summer", "Fall", "Winter"]
@@ -54,14 +53,13 @@ st.pyplot(fig)
 st.subheader("Number of Bike Renters by Month in 2012")
 fig, ax = plt.subplots(figsize=(15, 10))
 data_2012 = monthly_df[monthly_df["yr"]==1] 
-sns.barplot(
+ax = sns.barplot(
     y="cnt", 
     x="mnth",
     hue="mnth",
     data=data_2012,
     palette="viridis",
-    dodge=False,  
-    legend=False,
+    legend="full",
     ax=ax
 )
 month_label = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
